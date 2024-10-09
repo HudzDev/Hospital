@@ -40,3 +40,178 @@ enfermeiros_responsaveis: [
 { nome: "Paula Lima", cpf: "12345678909", registro: "CRE12345" },
 { nome: "João Mendes", cpf: "98765432100", registro: "CRE67890" } ]}
 })</pre>
+
+Inclua ao menos dez médicos de diferentes especialidades.
+
+Ao menos sete especialidades (considere a afirmação de que “entre as especialidades há pediatria, clínica geral, gastrenterologia e dermatologia”).
+
+<pre>db.medicos.insertMany([
+{   "nome": "Dr. Murilo Coelho",
+    "data_nascimento": "2006-04-10",
+    "especialidades": [
+        "Ginecologisca"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999991",
+        "email": "murilo@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010101", 
+        "CRM": "SP000001"
+    }
+},
+{
+    "nome": "Dr. Matheus Oliveira",
+    "data_nascimento": "2006-05-11",
+    "especialidades": [
+        "Clinica Geral"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999992",
+        "email": "matheus@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010102", 
+        "CRM": "SP000002"
+    }
+},
+{
+    "nome": "Dr. Kauan Lusbel",
+    "data_nascimento": "2003-05-15",
+    "especialidades": [
+        "Dermatologia"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999993",
+        "email": "lusbel@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010103", 
+        "CRM": "SP000003"
+    }
+},
+{
+    "nome": "Dr. Maykon Silva",
+    "data_nascimento": "",
+    "especialidades": [
+        "Gastrenterologia"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999994",
+        "email": "maykon@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010104", 
+        "CRM": "SP000004"
+    }
+},
+{
+    "nome": "Dra. Andressa Prudente",
+    "data_nascimento": "",
+    "especialidades": [
+        "Pediatria"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999995",
+        "email": "andressa@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010105", 
+        "CRM": "SP000005"
+    }
+},
+{
+    "nome": "Dra. Anna Cristina",
+    "data_nascimento": "",
+    "especialidades": [
+        "Pediatria"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999996",
+        "email": "anna@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010106", 
+        "CRM": "SP000006"
+    }
+},
+{
+    "nome": "Dr. Hudson de Souza",
+    "data_nascimento": "2003-11-09",
+    "especialidades": [
+        "Cirurgiao Geral"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999997",
+        "email": "hudson@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010107", 
+        "CRM": "SP000007"
+    }
+},
+{
+    "nome": "Dr. Victor de Curtis",
+    "data_nascimento": "",
+    "especialidades": [
+        "Ortopedia"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999998",
+        "email": "curtis@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010108", 
+        "CRM": "SP000008"
+    }
+},
+{
+    "nome": "Gabriel Augusto",
+    "data_nascimento": "",
+    "especialidades": [
+        "Neurologia"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999999",
+        "email": "curtis@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010109", 
+        "CRM": "SP000009"
+    }
+},
+{
+    "nome": "Dra. Aurora Seles",
+    "data_nascimento": "",
+    "especialidades": [
+        "Psiquiatria"
+    ],
+    "tipo": "Especialista",
+    "contato": { 
+        "telefone": "999999990",
+        "email": "curtis@hospital.com"
+    },
+    "status": 1,
+    "documentos": { 
+        "CPF": "10101010100", 
+        "CRM": "SP000000"
+    }
+} ]) </pre>
