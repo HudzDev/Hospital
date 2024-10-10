@@ -918,3 +918,94 @@ Registre 20 consultas de diferentes pacientes e diferentes médicos (alguns paci
   "instrucoes": "Tomar 1 comprimido a cada 24 horas" }]}
 }      
 ])</pre>
+
+Inclua ao menos quatro convênios médicos, associe ao menos cinco pacientes e cinco consultas.
+
+<pre>Inclusão dos quatro convênios:
+
+db.convenios.insertMany([
+{ "nome": "Vida Saúde",
+  "cnpj": "12345678000190",
+  "tipo": "Plano Familiar",
+  "cobertura": "Nacional",
+  "telefone": "(11) 1234-5678"
+},
+{ "nome": "Bem Estar",
+  "cnpj": "23456789000101",
+  "tipo": "Plano Empresarial",
+  "cobertura": "Regional",
+  "telefone": "(21) 2345-6789"
+},
+{ "nome": "Saúde Total",
+  "cnpj": "34567890000112",
+  "tipo": "Plano Individual",
+  "cobertura": "Nacional",
+  "telefone": "(31) 3456-7890"
+},
+{ "nome": "QualiMed",
+  "cnpj": "45678901000123",
+  "tipo": "Plano Coletivo",
+  "cobertura": "Estadual",
+  "telefone": "(41) 4567-8901"
+}
+])</pre>
+
+<pre>Primeiro paciente:
+
+db.pacientes.updateOne(
+{ "_id": ObjectId("66e993c257c77ee19c83daf2") },
+{ $set: {
+  "convenio": {
+  "nome": "Bem Estar",
+  "validade": "2025-12-31",
+  "CNPJ": "23456789000101",
+  "carencia": 30 }}
+})</pre>
+
+<pre>Segundo paciente:
+
+db.pacientes.updateOne(
+{ "_id": ObjectId("6706efa307ace6d19ac6386a") },
+{ $set: {
+  "convenio": {
+  "nome": "Vida Saúde",
+  "validade": "2024-06-30",
+  "CNPJ": "12345678000190",
+  "carencia": 45 }}
+})</pre>
+
+<pre>Terceiro paciente:
+
+db.pacientes.updateOne(
+{ "_id": ObjectId("66e993c257c77ee19c83daf1") },
+{ $set: {
+  "convenio": {
+  "nome": "Saúde Total",
+  "validade": "2025-03-31",
+  "CNPJ": "34567890000112",
+  "carencia": 60 }}
+})</pre>
+
+<pre>Quarto paciente:
+
+db.pacientes.updateOne(
+{ "_id": ObjectId("6706efa307ace6d19ac63869") },
+{ $set: {
+  "convenio": {
+  "nome": "QualiMed",
+  "validade": "2025-11-15",
+  "CNPJ": "45678901000123",
+  "carencia": 90 }}
+})</pre>
+
+<pre>Quinto paciente:
+
+db.pacientes.updateOne(
+{ "_id": ObjectId("6706efa307ace6d19ac6386f") },
+{ $set: {
+  "convenio": {
+  "nome": "Bem Estar",
+  "validade": "2024-10-31",
+  "CNPJ": "23456789000101",
+  "carencia": 30 }}
+})</pre>
