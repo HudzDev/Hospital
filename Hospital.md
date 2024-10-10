@@ -573,3 +573,348 @@ Inclua ao menos 15 pacientes.
   "CNPJ": "12345678000115",
   "carencia": 15 }
 } ])</pre>
+
+Registre 20 consultas de diferentes pacientes e diferentes médicos (alguns pacientes realizam mais que uma consulta). As consultas devem ter ocorrido entre 01/01/2015 e 01/01/2022. Ao menos dez consultas devem ter receituário com dois ou mais medicamentos.
+
+<pre>db.consultas.insertMany([
+{ "data": "2018-06-25",
+  "medico_id": "6706de21eeee5679bc5450a4",
+  "paciente_id": "6706efa307ace6d19ac63877",
+  "valor": 50,
+  "conveniada": true,
+  "especialidade_buscada": "Consulta Emergencial",
+  "descricao": "Paciente com febre e tosse",
+  "receita": {
+  "medicamentos": [
+    
+{ "nome": "Paracetamol comprimidos",
+  "quantidade": 10,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas" },
+
+{ "nome": "Ibuprofeno comprimidos",
+  "quantidade": 12,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas" } ],
+  
+  "tratamentos": [
+{ "nome": "Inalação com soro fisiológico",
+  "frequencia": "2 vezes ao dia" }]
+}},
+
+{ "data": "2016-03-15",
+  "medico_id": "6706de21eeee5679bc5450a4",
+  "paciente_id": "6706efa307ace6d19ac63877",
+  "valor": 80,
+  "conveniada": true,
+  "especialidade_buscada": "Ginecologia",
+  "descricao": "Consulta de rotina",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Anticoncepcional",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente" }]}
+},
+{ "data": "2017-04-20",
+  "medico_id": "6706de21eeee5679bc5450a5",
+  "paciente_id": "6706efa307ace6d19ac63878",
+  "valor": 100,
+  "conveniada": false,
+  "especialidade_buscada": "Dermatologia",
+  "descricao": "Tratamento de acne",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antibiótico",
+  "quantidade": 14,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas"
+},
+{ "nome": "Creme anti-acne",
+  "quantidade": 1,
+  "instrucoes": "Aplicar 2 vezes ao dia" }]}
+},
+{ "data": "2018-05-11",
+  "medico_id": "6706de21eeee5679bc5450a3",
+  "paciente_id": "6706efa307ace6d19ac63879",
+  "valor": 75,
+  "conveniada": true,
+  "especialidade_buscada": "Pediatria",
+  "descricao": "Consulta de rotina infantil",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Paracetamol xarope",
+  "quantidade": 100,
+  "instrucoes": "Tomar 5ml a cada 6 horas" }]}
+},
+{ "data": "2019-01-22",
+  "medico_id": "6706de21eeee5679bc5450a2",
+  "paciente_id": "6706efa307ace6d19ac63878",
+  "valor": 120,
+  "conveniada": false,
+  "especialidade_buscada": "Clínica Geral",
+  "descricao": "Avaliação de saúde geral",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Ibuprofeno comprimidos",
+  "quantidade": 10,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas"
+},
+{ "nome": "Antialérgico",
+  "quantidade": 10,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas" }]}
+},
+{ "data": "2019-03-12",
+  "medico_id": "6706de21eeee5679bc5450a1",
+  "paciente_id": "6706efa307ace6d19ac63877",
+  "valor": 90,
+  "conveniada": true,
+  "especialidade_buscada": "Cirurgia Geral",
+  "descricao": "Consulta para avaliação pré-cirúrgica",
+},
+{ "data": "2020-04-18",
+  "medico_id": "6706de21eeee5679bc5450a0",
+  "paciente_id": "6706efa307ace6d19ac63880",
+  "valor": 85,
+  "conveniada": false,
+  "especialidade_buscada": "Gastroenterologia",
+  "descricao": "Dor abdominal",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Omeprazol",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente"
+},
+{ "nome": "Antibiótico",
+  "quantidade": 14,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas" }]}
+},
+{ "data": "2021-06-01",
+  "medico_id": "6706de21eeee5679bc5450a7",
+  "paciente_id": "6706efa307ace6d19ac63879",
+  "valor": 110,
+  "conveniada": true,
+  "especialidade_buscada": "Ortopedia",
+  "descricao": "Lesão no joelho",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Analgésico",
+  "quantidade": 20,
+  "instrucoes": "Tomar 1 comprimido a cada 6 horas"
+},
+{ "nome": "Creme anti-inflamatório",
+  "quantidade": 1,
+  "instrucoes": "Aplicar no local afetado 3 vezes ao dia" }]}
+},
+{ "data": "2021-07-15",
+  "medico_id": "6706de21eeee5679bc5450a8",
+  "paciente_id": "6706efa307ace6d19ac63881",
+  "valor": 65,
+  "conveniada": false,
+  "especialidade_buscada": "Neurologia",
+  "descricao": "Dores de cabeça frequentes",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Analgésico",
+  "quantidade": 20,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas"
+},
+{ "nome": "Relaxante muscular",
+  "quantidade": 15,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas" }]}
+},
+{ "data": "2021-08-24",
+  "medico_id": "6706de21eeee5679bc5450a6",
+  "paciente_id": "6706efa307ace6d19ac63882",
+  "valor": 95,
+  "conveniada": true,
+  "especialidade_buscada": "Psiquiatria",
+  "descricao": "Avaliação psicológica",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antidepressivo",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente"
+},
+{ "nome": "Ansiolítico",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas" }]}
+},
+{ "data": "2021-09-30",
+  "medico_id": "6706de21eeee5679bc5450a9",
+  "paciente_id": "6706efa307ace6d19ac63883",
+  "valor": 70,
+  "conveniada": false,
+  "especialidade_buscada": "Oftalmologia",
+  "descricao": "Exame de vista",
+},
+{ "data": "2021-10-10",
+  "medico_id": "6706de21eeee5679bc5450a0",
+  "paciente_id": "6706efa307ace6d19ac63884",
+  "valor": 130,
+  "conveniada": true,
+  "especialidade_buscada": "Cardiologia",
+  "descricao": "Consulta para dor no peito",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Betabloqueador",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente"
+},
+{ "nome": "Antiinflamatório",
+  "quantidade": 14,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas" }]}
+},
+{ "data": "2021-11-05",
+  "medico_id": "6706de21eeee5679bc5450a2",
+  "paciente_id": "6706efa307ace6d19ac63885",
+  "valor": 150,
+  "conveniada": false,
+  "especialidade_buscada": "Endocrinologia",
+  "descricao": "Acompanhamento de diabetes",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Insulina",
+  "quantidade": 30,
+  "instrucoes": "Aplicar conforme orientação"
+},
+{ "nome": "Metformina",
+  "quantidade": 60,
+  "instrucoes": "Tomar 1 comprimido 2 vezes ao dia" }]}
+},
+{ "data": "2021-12-12",
+  "medico_id": "6706de21eeee5679bc5450a1",
+  "paciente_id": "6706efa307ace6d19ac63886",
+  "valor": 160,
+  "conveniada": true,
+  "especialidade_buscada": "Geriatria",
+  "descricao": "Avaliação geriátrica",
+},
+{
+  "data": "2022-01-05",
+  "medico_id": "6706de21eeee5679bc5450a0",
+  "paciente_id": "6706efa307ace6d19ac63887",
+  "valor": 140,
+  "conveniada": false,
+  "especialidade_buscada": "Reumatologia",
+  "descricao": "Dores nas articulações",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antiinflamatório",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente"
+},
+{ "nome": "Analgésico",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas" }]}
+},
+{ "data": "2022-01-20",
+  "medico_id": "6706de21eeee5679bc5450a9",
+  "paciente_id": "6706efa307ace6d19ac63888",
+  "valor": 125,
+  "conveniada": true,
+  "especialidade_buscada": "Otorrinolaringologia",
+  "descricao": "Dor de garganta",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antibiótico",
+  "quantidade": 14,
+  "instrucoes": "Tomar 1 comprimido a cada 8 horas"
+},
+{ "nome": "Analgésico",
+  "quantidade": 10,
+  "instrucoes": "Tomar 1 comprimido a cada 6 horas" }]}
+},
+{ "data": "2015-03-12",
+  "medico_id": "6706de21eeee5679bc5450a5",
+  "paciente_id": "6706efa307ace6d19ac63889",
+  "valor": 70,
+  "conveniada": true,
+  "especialidade_buscada": "Alergologia",
+  "descricao": "Reação alérgica a medicamentos",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antialérgico",
+  "quantidade": 20,
+  "instrucoes": "Tomar 1 comprimido a cada 12 horas" 
+},
+{
+  "nome": "Corticoide",
+  "quantidade": 10,
+  "instrucoes": "Tomar 1 comprimido a cada 24 horas" }]}
+},
+{ "data": "2016-09-10",
+  "medico_id": "6706de21eeee5679bc5450a6",
+  "paciente_id": "6706efa307ace6d19ac63890",
+  "valor": 95,
+  "conveniada": false,
+  "especialidade_buscada": "Fisioterapia",
+  "descricao": "Reabilitação após cirurgia",
+  "receita": {
+  "tratamentos": [
+
+{ "nome": "Sessões de fisioterapia",
+  "frequencia": "3 vezes por semana" }]}
+},
+{ "data": "2018-11-15",
+  "medico_id": "6706de21eeee5679bc5450a7",
+  "paciente_id": "6706efa307ace6d19ac63891",
+  "valor": 110,
+  "conveniada": true,
+  "especialidade_buscada": "Oftalmologia",
+  "descricao": "Exame de vista",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Colírio lubrificante",
+  "quantidade": 1,
+  "instrucoes": "Aplicar 2 vezes ao dia"
+},
+{ "nome": "Óculos corretivos",
+  "quantidade": 1,
+  "instrucoes": "Usar conforme necessidade" }]}
+},
+{
+  "data": "2020-02-20",
+  "medico_id": "6706de21eeee5679bc5450a1",
+  "paciente_id": "6706efa307ace6d19ac63892",
+  "valor": 85,
+  "conveniada": false,
+  "especialidade_buscada": "Clínica Geral",
+  "descricao": "Consulta de rotina",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Vitamina D",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente" }]}
+},
+{ "data": "2021-04-14",
+  "medico_id": "6706de21eeee5679bc5450a8",
+  "paciente_id": "6706efa307ace6d19ac63893",
+  "valor": 115,
+  "conveniada": true,
+  "especialidade_buscada": "Cardiologia",
+  "descricao": "Avaliação de pressão alta",
+  "receita": {
+  "medicamentos": [
+
+{ "nome": "Antihipertensivo",
+  "quantidade": 30,
+  "instrucoes": "Tomar 1 comprimido diariamente"
+},
+{
+  "nome": "Diurético",
+  "quantidade": 14,
+  "instrucoes": "Tomar 1 comprimido a cada 24 horas" }]}
+}      
+])</pre>
