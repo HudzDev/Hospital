@@ -1009,3 +1009,55 @@ db.pacientes.updateOne(
   "CNPJ": "23456789000101",
   "carencia": 30 }}
 })</pre>
+
+<pre>Consultas:
+
+db.consultas.updateMany(
+{ "paciente_id": ObjectId("66e96b0576efecbc5e470c28") },
+{ $set: {
+  "convenio": {
+  "nome": "Bem Estar",
+  "validade": "2025-12-31",
+  "CNPJ": "23456789000101",
+  "carencia": 30 }}
+})</pre>
+
+<pre>db.consultas.updateMany(
+{ "paciente_id": ObjectId("6706efa307ace6d19ac63879") },
+{ $set: {
+  "convenio": {
+  "nome": "Vida Saúde",
+  "validade": "2024-06-30",
+  "CNPJ": "12345678000190",
+  "carencia": 45 }}
+})</pre>
+
+<pre>db.consultas.updateMany(
+{ "paciente_id": ObjectId("6706efa307ace6d19ac63877") },
+{ $set: {
+  "convenio": {
+  "nome": "Saúde Total",
+  "validade": "2025-03-31",
+  "CNPJ": "34567890000112",
+  "carencia": 60 }}
+})</pre>
+
+<pre>db.consultas.updateMany(
+{ "paciente_id": ObjectId("6706efa307ace6d19ac63878") },
+{ $set: {
+  "convenio": {
+  "nome": "QualiMed",
+  "validade": "2025-11-15",
+  "CNPJ": "45678901000123",
+  "carencia": 90 }}
+})</pre>
+
+<pre>db.consultas.updateMany(
+{ "paciente_id": ObjectId("6706efa307ace6d19ac6386f") },
+{ $set: {
+  "convenio": {
+  "nome": "Bem Estar",
+  "validade": "2024-10-31",
+  "CNPJ": "23456789000101",
+  "carencia": 30 }}
+})</pre>
