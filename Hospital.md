@@ -32,6 +32,9 @@ O objetivo é substituir suas planilhas antigas por um banco de dados moderno. D
 * nome
 * documentos
 
+![Diagrama](https://github.com/user-attachments/assets/a4af8597-ac5b-4530-a96d-c3288d1d843c)
+
+
 ## Consultas
 
 1. Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
